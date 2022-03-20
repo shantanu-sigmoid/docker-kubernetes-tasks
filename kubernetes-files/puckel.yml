@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: puckel-pod
+  labels:
+    name: puckel-pod
+    app: myapp
+spec:
+  containers:
+    - name: puckel
+      image: puckel/docker-airflow:1.10.9
+      ports:
+        - containerPort: 8080
