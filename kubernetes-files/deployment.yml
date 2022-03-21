@@ -34,3 +34,6 @@ spec:
           image: puckel/docker-airflow:1.10.9
           ports:
             - containerPort: 8080 
+          env: 
+
+            
