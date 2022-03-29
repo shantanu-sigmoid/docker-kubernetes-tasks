@@ -6,6 +6,7 @@ metadata:
     name: puckel-service
     app: myapp
 spec:
+  type: ClusterIP
   ports:
     - port: 8080
       targetPort: 8080
