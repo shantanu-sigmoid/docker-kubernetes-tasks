@@ -28,3 +28,12 @@ spec:
               value: postgresql://airflow:airflow@postgres-service-db:5432/airflow
             - name: AIRFLOW__CORE__EXECUTOR
               value: LocalExecutor
+          volumeMounts:
+            - name: dags-host-volume
+              mountPath: /usr/local/airflow/dags
+
+      volumes:
+        - name: dags-host-volume
+          hostPath:
+            path: /mnt/airflow/dags
+            type: Directory
